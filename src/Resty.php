@@ -885,7 +885,12 @@ class Resty
                 'header'=>$headerarr,
                 'ignore_errors'=>1,
                 'max_redirects'=>$max_redirects
-            )
+            ),
+            'ssl'=>[
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+                'allow_self_signed' => false
+            ]
         );
 
         $this->log('URL =================');
